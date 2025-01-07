@@ -1,0 +1,43 @@
+/* Estilos generales para el contenedor principal */
+.app-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Para que el contenido ocupe al menos toda la altura de la pantalla */
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+nav ul li a:
