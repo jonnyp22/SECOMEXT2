@@ -1,0 +1,30 @@
+import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../services/category.service'; // Servicio para interactuar con la API
+import { Category } from '../models/category.model'; // Modelo de Categoría
+
+@Component({
+  selector: 'app-categories-list',
+  templateUrl: './categories-list.component.html',
+  styleUrls: ['./categories-list.component.css']
+})
+export class CategoriesListComponent implements OnInit {
+  categories: Category[] = []; // Array para almacenar las categorías
+
+  constructor(private categoryService: CategoryService) { }
+
+  ngOnInit(): void {
+    this.loadCategories(); // Cargar las categorías al inicializar el componente
+  }
+
+  loadCategories(): void {
+    this.categoryService.getCategories().subscribe((data) => {
+      this.categories = data; // Asignar las categorías obtenidas
+    });
+  }
+
+  deleteCategory(id: number): void {
+    this.categoryService.deleteCategory(id).subscribe(() => {
+      this.loadCategories(); // Recargar las categorías después de eliminar una
+    });
+  }
+}
