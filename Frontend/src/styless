@@ -1,0 +1,33 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  color: $text-color;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
