@@ -1,0 +1,25 @@
+<!-- Contenedor principal de la aplicación -->
+<div class="app-container">
+  
+  <!-- Encabezado de la aplicación -->
+  <header>
+    <h1>{{ title }}</h1> <!-- Título de la aplicación -->
+    <nav>
+      <ul>
+        <li><a routerLink="/">Inicio</a></li> <!-- Enlace a la página de inicio -->
+        <li><a routerLink="/products">Productos</a></li> <!-- Enlace a la lista de productos -->
+        <li><a routerLink="/categories">Categorías</a></li> <!-- Enlace a la lista de categorías -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cuerpo de la aplicación, donde se renderizan los componentes según las rutas -->
+  <main>
+    <router-outlet></router-outlet> <!-- Aquí se renderizan los componentes según la ruta activa -->
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 Mi Aplicación</p> <!-- Información del pie de página -->
+  </footer>
+</div>
